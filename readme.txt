@@ -5,7 +5,6 @@ Requires at least: WordPress 3.4, BuddyPress 1.5
 Tested up to: WordPress 3.5 / BuddyPress 1.6
 Stable tag: 1.0.1
 
-
 == Description ==
 
 BuddyPress Activity Privacy plugin add a privacy level to activity stream component.
