@@ -3,7 +3,7 @@ Contributors: megainfo
 Tags: buddypress,activity,privacy,visibility,stream,private,public,only me,admins only, friends,
 Requires at least: WordPress 3.4, BuddyPress 1.5
 Tested up to: WordPress 3.5 / BuddyPress 1.6
-Stable tag: 1.0
+Stable tag: 1.0.1
 
 
 == Description ==
