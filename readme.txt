@@ -37,5 +37,8 @@ https://github.com/dzmounir/buddypress-activity-privacy
 
 == Changelog ==
 
+= 1.0.1 =
+* Fix small CSS problem in Activity Post Form.
+
 = 1.0 =
 * Initial release.
