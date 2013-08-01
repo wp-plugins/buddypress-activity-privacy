@@ -3,7 +3,7 @@ Contributors: megainfo
 Tags: buddypress,activity,privacy,visibility,stream,private,public,only me,admins only,friends, followers,vie privée,confidentialité
 Requires at least: WordPress 3.4, BuddyPress 1.5
 Tested up to: WordPress 3.5.1 / BuddyPress 1.8
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 
 
 == Description ==
@@ -61,6 +61,9 @@ Or In GitHub
 https://github.com/dzmounir/buddypress-activity-privacy
 
 == Changelog ==
+
+= 1.1.2 =
+- Fix js bug due the use of bp_get_cookies() function (added since bp 1.8).
 
 = 1.1.1 =
 - Fix jquery select option on change event ( submit privacy selection on previous items )
