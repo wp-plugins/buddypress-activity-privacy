@@ -3,7 +3,8 @@ if ( typeof jq == "undefined" )
 
 
 jq(document).ready( function() {
-	jq('.bp-ap-selectbox').change(function(event) {
+	
+	jq('body').on('change', '.bp-ap-selectbox',  function(event) {
 		var target = jq(event.target);
     	var parent = target.closest('.activity-item');
     	var parent_id = parent.attr('id').substr( 9, parent.attr('id').length );
