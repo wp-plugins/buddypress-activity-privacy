@@ -43,7 +43,7 @@ function bp_activity_privacy_add_css() {
 
 	// $srcs = array_map('basename', (array) wp_list_pluck($wp_styles->registered, 'src') );
 	// if ( !in_array('font-awesome.css', $srcs) && !in_array('font-awesome.min.css', $srcs)  ) {
-    wp_enqueue_style( 'bp-font-awesome-css', plugins_url( 'css/font-awesome/css/font-awesome.min.css' ,  __FILE__ )); 
+    wp_enqueue_style( 'bp-activity-privacy-font-awesome-css', plugins_url( 'css/font-awesome/css/font-awesome.min.css' ,  __FILE__ )); 
 	// }
     wp_enqueue_style( 'bp-activity-privacy-css', plugins_url( 'css/bp-activity-privacy.css' ,  __FILE__ )); 
 }
