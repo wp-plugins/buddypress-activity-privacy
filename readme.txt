@@ -2,18 +2,25 @@
 Contributors: megainfo
 Tags: buddypress,activity,privacy,visibility,stream,private,public,only me,admins only,friends, followers,vie privée,confidentialité
 Requires at least: WordPress 3.4, BuddyPress 1.5
-Tested up to: WordPress 3.9 / BuddyPress 2.0
-Stable tag: 1.3.1
+Tested up to: WordPress 3.9 / BuddyPress 2.0.1
+Stable tag: 1.3.2
 
 
 == Description ==
 
 BuddyPress Activity Privacy plugin add a privacy level to activity stream component.
 
-The plugin add the ability for members to choose who can read his activity before it posted (Anyone, Logged In Users, My Friends, Admins Only, Only me, My Friends in Group , Group Members ...etc). 
+The plugin add the ability for members to choose who can read his activity (Anyone, Logged In Users, My Friends, Admins Only, Only me, My Friends in Group , Group Members ...etc). 
 
 
-What's news In Buddypress Activity Privacy 1.3.x ?
+= What's news In Buddypress Activity Privacy 1.3.x ? = 
+
+- **Integration with Buddypress Media plugin** (https://wordpress.org/plugins/buddypress-media/).
+
+  Make sure to :
+    * Set the privacy settings to **OFF** in rtMedia settings.
+    * A new select-box (Privacy) is added to Edit Media form under Description Textarea.
+
 - The plugin work now on multi site Netowork.
 - A New privacy level (@mentioned only). When a member choose this privacy level, only mentioned members (and admin of course) can see the activity.
 
@@ -23,7 +30,6 @@ Remark: Members mentioned in activity can see it's content whatever the privacy 
 - New Drop down system with a nice icons (font awsome).
 
 - Admin Option Area, Admin can update Enable/Disable privacy level, Sort the privacy levels and change the default privacy level. 
-
 
 
 What's news In Buddypress Activity Privacy 1.x ?
@@ -69,13 +75,19 @@ https://github.com/dzmounir/buddypress-activity-privacy
 
 == Changelog ==
 
+= 1.3.2 =
+- Fix issues when Buddypress Follow is activate.
+- Fix visibility of "Last update" activity on member header and members loop.
+- Beta Integration with buddypress-media plugin (rtMedia for WordPress, BuddyPress and bbPress).
+- add .POT file for translation.
+
 = 1.3.1 =
 - Work on Multisite Network.
 - Fix "new post" activities dropdown privacy as profile activites privacy.
 
 = 1.3 =
 - Fix localization loading.
-- Fix integration with Followers plugin
+- Fix integration with Followers plugin.
 
 = 1.2.2 =
 - Fix bug, visibility not work. 
