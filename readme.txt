@@ -3,7 +3,7 @@ Contributors: megainfo
 Tags: buddypress,activity,privacy,visibility,stream,private,public,only me,admins only,friends, followers,vie privée,confidentialité
 Requires at least: WordPress 3.4, BuddyPress 1.5
 Tested up to: WordPress 3.9 / BuddyPress 2.0.1
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 
 
 == Description ==
@@ -74,6 +74,9 @@ Or In GitHub
 https://github.com/dzmounir/buddypress-activity-privacy
 
 == Changelog ==
+
+= 1.3.3 =
+- Fix bugs on integration with rtMedia.
 
 = 1.3.2 =
 - Fix issues when Buddypress Follow is activate.
