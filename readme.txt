@@ -17,9 +17,9 @@ The plugin add the ability for members to choose who can read his activity (Anyo
 
 - Admin have abitility to enable/disable FontAwsome icons.
 
-- Admin have abitility to enable/disable view and editing the privacy of all activities.
+- Admin have abitility to enable/disable viewing and editing the privacy of all activities.
 
-- Admin have abitility to enable/disable viewing/editing the visibility for all members.
+- Admin have abitility to enable/disable editing the privacy of posts for all members.
 
 - Admin have abitility show/hide the privacy label in selexbox.
 
