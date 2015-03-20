@@ -2,8 +2,8 @@
 Contributors: megainfo
 Tags: buddypress,activity,privacy,visibility,stream,private,public,only me,admins only,friends, followers,vie privée,confidentialité
 Requires at least: WordPress 3.4, BuddyPress 1.5
-Tested up to: WordPress 3.9 / BuddyPress 2.0.1
-Stable tag: 1.3.3
+Tested up to: WordPress 3.4.1 / BuddyPress 2.2.1
+Stable tag: 1.3.4
 
 
 == Description ==
@@ -74,6 +74,17 @@ Or In GitHub
 https://github.com/dzmounir/buddypress-activity-privacy
 
 == Changelog ==
+= 1.3.4 =
+- Admin have abitility to enable/disable FontAwsome icons.
+- Admin have abitility to enable/disable view and editing the privacy of all activities.
+- Admin have abitility to enable/disable viewing/editing the visibility for all members.
+- Admin have abitility show/hide the privacy label in selexbox.
+- Admin have abitility show/hide the privacy in activity meta.
+
+- Fix warning message bp_setup_current_user was called incorrectly
+- Fix bug visibility of "Last update" activity on member header and members loop.
+- Fix translation file loading
+- Fix some issues in rtMedia plugin integration
 
 = 1.3.3 =
 - Fix bugs on integration with rtMedia.

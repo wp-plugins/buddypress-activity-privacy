@@ -8,8 +8,7 @@
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
-
-// Integration of BP Activity Privacy with Buddypress Followers
+// Integration with Buddypress Followers
 if( function_exists('bp_follow_is_following') ) {
 
 	add_filter('bp_more_visibility_activity_filter', 'bp_follow_visibility_activity', 10, 3);
@@ -98,9 +97,7 @@ if( function_exists('bp_follow_is_following') ) {
 	}
 }
 
-
-// Fix/Integration of BP Activity Privacy with Buddypress Activity Plus
-
+// Fix/Integration with Buddypress Activity Plus
 if( function_exists('bpfb_plugin_init') ) {
 
 	add_action( 'wp_footer', 'bp_activity_privacy_fix_bp_activity_plus' );
@@ -145,8 +142,9 @@ if( function_exists('bpfb_plugin_init') ) {
 
 				//reset the privacy selection
 				jq("select#activity-privacy option[selected]").prop('selected', true).trigger('change');
-
+				<?php if( bp_ap_is_use_custom_styled_selectbox() ) { ?>
 				jq('select.bp-ap-selectbox').customStyle('2');
+				<?php } ?>
 			});
 		});
 	});
@@ -156,9 +154,6 @@ if( function_exists('bpfb_plugin_init') ) {
 	}
 	
 }
-
-
-
 
 // Integration with rTmedia
 if( function_exists('rtmedia_autoloader') ) { 
@@ -213,7 +208,10 @@ if( function_exists('rtmedia_autoloader') ) {
 	    //if ($bp_displayed_user_id == $bp_loggedin_user_id)
 	    //	return;
 
-	    global $rtmedia, $rtmedia_query;
+	    global $rtmedia;
+
+	    $media_model = new RTMediaModel();
+
 
 	    $allowed_media_types = array();
 		foreach ( $rtmedia->allowed_types as $value ) {
@@ -222,7 +220,8 @@ if( function_exists('rtmedia_autoloader') ) {
 		$allowed_media_types = implode("','", $allowed_media_types);
 		$allowed_media_types = "'".$allowed_media_types."'";
 
-	    $table_name = $rtmedia_query->model->table_name;
+
+	    $table_name = $media_model->table_name;
 
 	    $r = $wpdb->get_results( $wpdb->prepare( "SELECT activity_id, media_type 
 	    	                       from {$table_name} 
@@ -240,6 +239,9 @@ if( function_exists('rtmedia_autoloader') ) {
 	    	$remove_from_stream = bp_visibility_is_activity_invisible( $activity, $bp_loggedin_user_id, $is_super_admin, $bp_displayed_user_id );
 	        
 	        if ($remove_from_stream) {
+	        	if(!isset($removed_media_count[$my_r->media_type]))
+	        		$removed_media_count[$my_r->media_type] = 0;
+
 	        	$removed_media_count[$my_r->media_type]++;
 	        }
 	  
@@ -449,7 +451,7 @@ if( function_exists('rtmedia_autoloader') ) {
 	        foreach ($visibility_levels as $visibility_level) {
 	            if( $visibility_level["disabled"] )
 	                continue;
-	            $html .= '<option class="" ' . ( $visibility_level['id'] == $visibility ? " selected='selected'" : '' ) . ' value="' . $visibility_level["id"] . '">&nbsp;' . $visibility_level["label"] . '</option>';
+	            $html .= '<option class="" ' . ( $visibility_level['id'] == $visibility ? " selected='selected'" : '' ) . ' value="' . $visibility_level["id"] . '">' . $visibility_level["label"] . '</option>';
 	        }
 	        $html .= '</select>';
 
@@ -481,5 +483,4 @@ if( function_exists('rtmedia_autoloader') ) {
 
 	}
 	add_action('rtmedia_after_update_media', 'bp_ap_rtmedia_after_update_media');
-
 }
