@@ -117,4 +117,8 @@ Version 1.3.4 (Mar 12, 2015)
 - Fix translation file loading
 - Fix some issues in rtMedia plugin integration
 
-  
+
+Version 1.3.5 (Mar 20, 2015)
+--------------------------------------------------------------
+- Fix bug activity detail links caused by overidding  activity allowed_tags
+

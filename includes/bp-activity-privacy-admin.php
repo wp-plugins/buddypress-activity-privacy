@@ -695,4 +695,4 @@ class BPActivityPrivacy_Admin {
   	//@TODO
   	function update(){
   	}
-}  
+}
